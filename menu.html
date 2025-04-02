@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            color: #3E2723;
+        }
+
+        html, body {
+            background-color: #F4E1C6;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #ffffff;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 100px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+        #order-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+        .order-options {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+        }
+        
+        
+        button {
+                margin-top: 20px; 
+                font-size: 16px;
+        }
+
+        footer {
+            background: #ffffff;
+            text-align: center;
+            font-size: 1.2em;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/logo.jpg" alt="Logo">
+            <h1>El Restaurante</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="#menu">Menu</Menu></a>
+            <a href="#order-form">Order Form</a>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <section id="menu">
+                <h2 class="title">Menu</h2>
+                <article class="products">
+                    <article>
+                        <img class="menu-img" src="/images/hamburger.jpg">
+                        <h3>Borger</h3>
+                        <p>It's a borger</p>
+                    </article>
+                    <article>
+                        <img class="menu-img" src="/images/potato.jpg">
+                        <h3>Patata</h3>
+                        <p>Some patatas</p>
+                    </article>
+                    <article>
+                        <img class="menu-img" src="/images/drink.jpg">
+                        <h3>Dronk</h3>
+                        <p>If you're thirsty</p>
+                    </article>
+                </article>
+            </section>
+            <section id="order-form">
+                <h2 class="title">Place Your Order</h2>
+
+                <form class="order-options">
+                    <div class="order-text">
+                        <label for="many-borgars">Borgars:</label>
+                        <input type="number" id="many-borgars" name="Borgars" min="0" max="10">
+                        <br>
+                        <label for="cheeseaddon">Extra Cheese on Borgar</label>
+                        <input type="checkbox" id="cheese-addon">
+                        <textarea id="borgar-text" rows="4" cols="30" placeholder="Write your order here..."></textarea>
+                    </div>
+                    <div class="order-text">
+                        <label for="many-patatas">Patatas:</label>
+                        <input type="number" id="many-patatas" name="Patatas" min="0" max="10">
+                        <br>
+                        <label for="sauce-addon">Sauce for Patatas</label>
+                        <input type="checkbox" id="sauce-addon">
+                        <textarea id="patata-text" rows="4" cols="30" placeholder="Write your order here..."></textarea>
+                    </div>
+                    <div class="order-text">
+                        <label for="many-dronks">Dronks:</label>
+                        <input type="number" id="many-dronks" name="Dronks" min="0" max="10">
+                        <br>
+                        <label for="ice-addon">Ice for Dronk</label>
+                        <input type="checkbox" id="ice-addon">
+                        <textarea id="dronk-text" rows="4" cols="30" placeholder="Write your order here..."></textarea>
+                    </div>
+                    
+                </form>
+                <button type="submit" id="submit-button">Go To Checkout</button>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>Made with love by Es Ban Kai</p>
+    </footer>
+</body>
+
+</html>
